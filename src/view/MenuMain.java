@@ -1,7 +1,6 @@
 /*
  * @author hexcold || (@henrq.p)
  */
-
 package view;
 
 import java.io.IOException;
@@ -9,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import logic.save.Save;
 import view.History.MenuStoryPlayer;
+import view.playerVsPlayer.BattlePlayerVsPlayer;
 
 public class MenuMain extends javax.swing.JFrame {
 
@@ -103,7 +103,9 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void playerVsPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerVsPlayerActionPerformed
-
+        BattlePlayerVsPlayer playerVsPlayer = new BattlePlayerVsPlayer();
+        this.dispose();
+        playerVsPlayer.setVisible(true);
     }//GEN-LAST:event_playerVsPlayerActionPerformed
 
     private void startGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameActionPerformed

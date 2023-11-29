@@ -13,7 +13,7 @@ import view.battle.victory.VictoryMelano;
 
 public class BattleMelano extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01(100, 10, 15, 20, 30);
+    public static Player01 player = new Player01("Player01", 100, 10, 15, 20, 30);
     public static Melano melano = new Melano();
     public static RobotAttack robotAttack = new RobotAttack();
 

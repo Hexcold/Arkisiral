@@ -5,24 +5,26 @@
 
 package characters.players;
 
-/**
- *
- * @author henri
- */
 public abstract class Player {
-
+    
+    protected String name;
     protected double life;
     protected double baseAttack;
     protected double lowerAttack;
     protected double rangedAttack;
     protected double powerAttack;
 
-    public Player(double life, double baseAttack, double lowerAttack, double rangedAttack, double powerAttack) {
+    public Player(String name, double life, double baseAttack, double lowerAttack, double rangedAttack, double powerAttack) {
+        this.name = name;
         this.life = life;
         this.baseAttack = baseAttack;
         this.lowerAttack = lowerAttack;
         this.rangedAttack = rangedAttack;
         this.powerAttack = powerAttack;
+    }
+    
+    public String getName() {
+        return this.name;
     }
 
     public double getLife() {
@@ -47,6 +49,26 @@ public abstract class Player {
 
     public void setlife(double life) {
         this.life = life;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void setBaseAttack(double baseAttack) {
+        this.baseAttack = baseAttack;
+    }
+    
+    public void setLowerAttack(double lowerAttack) {
+        this.lowerAttack = lowerAttack;
+    }
+    
+    public void setRangedAttack(double rangedAttack) {
+        this.rangedAttack = rangedAttack;
+    }
+    
+    public void setPowerAttack(double powerAttack) {
+        this.powerAttack = powerAttack;
     }
 
 }

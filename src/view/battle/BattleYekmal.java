@@ -14,7 +14,7 @@ import view.battle.victory.VictoryYekmal;
 
 public class BattleYekmal extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01(100, 10, 15, 20, 30);
+    public static Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
     public static Yekmal yekmal = new Yekmal();
     public static RobotAttack robotAttack = new RobotAttack();
 
