@@ -3,6 +3,7 @@
  */
 package view.playerVsPlayer;
 
+import characters.players.Player;
 import view.battle.*;
 import view.playerVsPlayer.victory.VictoryPlayer01;
 import view.playerVsPlayer.victory.VictoryPlayer02;
@@ -13,13 +14,17 @@ import logic.RobotAttack;
 
 public class BattlePlayerVsPlayer extends javax.swing.JFrame {
 
-    public static Player01 player01 = new Player01( "Player01" ,100, 10, 15, 20, 30);
-    public static Player02 player02 = new Player02( "Player02" ,100, 10, 15, 20, 30);
-    public static RobotAttack robotAttack = new RobotAttack();
+    public Player01 player01;
+    public Player02 player02;
+    public RobotAttack robotAttack = new RobotAttack();
 
-    public BattlePlayerVsPlayer() {
+    public BattlePlayerVsPlayer(Player p01, Player p02) {
+
         initComponents();
         
+        player01 = new Player01( p01.getName() ,p01.getLife(),p01.getBaseAttack(), p01.getLowerAttack(), p01.getRangedAttack(), p01.getPowerAttack());
+        player02 = new Player02( p02.getName() ,p02.getLife(),p02.getBaseAttack(), p02.getLowerAttack(), p02.getRangedAttack(), p02.getPowerAttack());
+   
         player01Life.setText(Double.toString(player01.getLife()));
         player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
         player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));

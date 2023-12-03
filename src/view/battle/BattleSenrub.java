@@ -8,6 +8,7 @@ import characters.adversary.Senrub;
 import logic.Game;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatSenrub;
+import view.battle.gif.SwordGif;
 import view.battle.victory.VictorySenrub;
 
 public class BattleSenrub extends javax.swing.JFrame {
@@ -149,6 +150,9 @@ public class BattleSenrub extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         senrub.setlife(Game.lowerAttack(player.getLowerAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack(senrub.getName(), player);
@@ -183,6 +187,9 @@ public class BattleSenrub extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         senrub.setlife(Game.rangedAttack(player.getRangedAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack(senrub.getName(), player);
@@ -217,6 +224,9 @@ public class BattleSenrub extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         senrub.setlife(Game.baseAttack(player.getBaseAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack(senrub.getName(), player);
@@ -251,6 +261,9 @@ public class BattleSenrub extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         senrub.setlife(Game.powerAttack(player.getPowerAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack(senrub.getName(), player);

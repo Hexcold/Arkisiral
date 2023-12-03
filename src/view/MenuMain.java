@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 import logic.save.Save;
 import view.History.MenuStoryPlayer;
 import view.playerVsPlayer.BattlePlayerVsPlayer;
+import view.playerVsPlayer.FilesPlayerVsPlayer;
+import view.battle.gif.SwordGif;
 
 public class MenuMain extends javax.swing.JFrame {
 
@@ -95,7 +97,7 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_contnueActionPerformed
 
     private void storyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_storyActionPerformed
-
+        
     }//GEN-LAST:event_storyActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
@@ -103,9 +105,9 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_exitActionPerformed
 
     private void playerVsPlayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerVsPlayerActionPerformed
-        BattlePlayerVsPlayer playerVsPlayer = new BattlePlayerVsPlayer();
+        FilesPlayerVsPlayer filesplayerVsPlayer = new FilesPlayerVsPlayer();
         this.dispose();
-        playerVsPlayer.setVisible(true);
+        filesplayerVsPlayer.setVisible(true);
     }//GEN-LAST:event_playerVsPlayerActionPerformed
 
     private void startGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameActionPerformed

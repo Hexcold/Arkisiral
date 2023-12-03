@@ -24,19 +24,11 @@ public class FileOps {
 
 
         } catch (IOException e) {
-            System.out.println("\u001b[31mfail: Ocorreu um erro ao sobrescrever o arquivo: \u001b[00m" + e.getMessage());
+            System.err.println("fail: Ocorreu um erro ao sobrescrever o arquivo: " + e.getMessage());
         }
 
     }
-
-    public static String read() {
-        return "Myka";
-    }
-
-    public static void delete() {
-
-    }
-
+    
     public static String cont() throws IOException {
         try {
             byte[] fileBytes = Files.readAllBytes(Paths.get(fileName));
@@ -44,7 +36,7 @@ public class FileOps {
         System.out.println(fileContent);
         return fileContent;
         } catch (IOException e) {
-            System.out.println("\u001b[31mfail: Ocorreu um erro ao ler o arquivo: \u001b[00m" + e.getMessage());
+            System.err.println("fail: Ocorreu um erro ao ler o arquivo: " + e.getMessage());
             return "0";
         }   
     }

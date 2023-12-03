@@ -6,6 +6,7 @@ package logic.save;
 
 import java.io.IOException;
 
+import view.History.MenuStoryPlayer;
 import view.History.MenuStoryNaryata;
 import view.History.MenuStorySocram;
 import view.History.MenuStoryMelano;
@@ -21,6 +22,11 @@ public class Save {
         String inputUser = null;
 
         switch (FileOps.cont()) {
+            
+            case "0" -> {
+                MenuStoryPlayer menuStoryPlayer = new MenuStoryPlayer();
+                menuStoryPlayer.setVisible(true);
+            }
 
             case "1" -> {
                 MenuStoryNaryata menuStoryNaryata = new MenuStoryNaryata();

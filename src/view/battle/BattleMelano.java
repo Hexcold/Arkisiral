@@ -1,7 +1,6 @@
 /**
  * @author hexcold || (@henrq.p)
  */
-
 package view.battle;
 
 import characters.players.Player01;
@@ -9,6 +8,7 @@ import characters.adversary.Melano;
 import logic.Game;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatMelano;
+import view.battle.gif.SwordGif;
 import view.battle.victory.VictoryMelano;
 
 public class BattleMelano extends javax.swing.JFrame {
@@ -150,6 +150,9 @@ public class BattleMelano extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         melano.setlife(Game.lowerAttack(player.getLowerAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
@@ -165,18 +168,18 @@ public class BattleMelano extends javax.swing.JFrame {
         enemyLowerAttack.setText(Double.toString(melano.getLowerAttack()));
         enemyRangedAttack.setText(Double.toString(melano.getRangedAttack()));
         enemyBaseAttack.setText(Double.toString(melano.getBaseAttack()));
-        
-        if ((melano.getLife() <= 0) || (melano.getLife() <=0 && player.getLife() <= 0)) {
+
+        if ((melano.getLife() <= 0) || (melano.getLife() <= 0 && player.getLife() <= 0)) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             VictoryMelano victoryMelano = new VictoryMelano();
             this.dispose();
             victoryMelano.setVisible(true);
-        } else  if (melano.getLife() > 0 && player.getLife() <= 0) {
+        } else if (melano.getLife() > 0 && player.getLife() <= 0) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             DefeatMelano defeatMelano = new DefeatMelano();
             this.dispose();
             defeatMelano.setVisible(true);
@@ -184,7 +187,10 @@ public class BattleMelano extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    melano.setlife(Game.rangedAttack(player.getRangedAttack(), melano.getLife()));
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
+        melano.setlife(Game.rangedAttack(player.getRangedAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
 
@@ -199,25 +205,28 @@ public class BattleMelano extends javax.swing.JFrame {
         enemyLowerAttack.setText(Double.toString(melano.getLowerAttack()));
         enemyRangedAttack.setText(Double.toString(melano.getRangedAttack()));
         enemyBaseAttack.setText(Double.toString(melano.getBaseAttack()));
-        
-        if ((melano.getLife() <= 0) || (melano.getLife() <=0 && player.getLife() <= 0)) {
+
+        if ((melano.getLife() <= 0) || (melano.getLife() <= 0 && player.getLife() <= 0)) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             VictoryMelano victoryMelano = new VictoryMelano();
             this.dispose();
             victoryMelano.setVisible(true);
-        } else  if (melano.getLife() > 0 && player.getLife() <= 0) {
+        } else if (melano.getLife() > 0 && player.getLife() <= 0) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             DefeatMelano defeatMelano = new DefeatMelano();
             this.dispose();
             defeatMelano.setVisible(true);
-        }      
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         melano.setlife(Game.baseAttack(player.getBaseAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
@@ -233,25 +242,28 @@ public class BattleMelano extends javax.swing.JFrame {
         enemyLowerAttack.setText(Double.toString(melano.getLowerAttack()));
         enemyRangedAttack.setText(Double.toString(melano.getRangedAttack()));
         enemyBaseAttack.setText(Double.toString(melano.getBaseAttack()));
-        
-        if ((melano.getLife() <= 0) || (melano.getLife() <=0 && player.getLife() <= 0)) {
+
+        if ((melano.getLife() <= 0) || (melano.getLife() <= 0 && player.getLife() <= 0)) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             VictoryMelano victoryMelano = new VictoryMelano();
             this.dispose();
             victoryMelano.setVisible(true);
-        } else  if (melano.getLife() > 0 && player.getLife() <= 0) {
+        } else if (melano.getLife() > 0 && player.getLife() <= 0) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             DefeatMelano defeatMelano = new DefeatMelano();
             this.dispose();
             defeatMelano.setVisible(true);
-        }       
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+
         melano.setlife(Game.powerAttack(player.getPowerAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
@@ -267,18 +279,18 @@ public class BattleMelano extends javax.swing.JFrame {
         enemyLowerAttack.setText(Double.toString(melano.getLowerAttack()));
         enemyRangedAttack.setText(Double.toString(melano.getRangedAttack()));
         enemyBaseAttack.setText(Double.toString(melano.getBaseAttack()));
-        
-        if ((melano.getLife() <= 0) || (melano.getLife() <=0 && player.getLife() <= 0)) {
+
+        if ((melano.getLife() <= 0) || (melano.getLife() <= 0 && player.getLife() <= 0)) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             VictoryMelano victoryMelano = new VictoryMelano();
             this.dispose();
             victoryMelano.setVisible(true);
-        } else  if (melano.getLife() > 0 && player.getLife() <= 0) {
+        } else if (melano.getLife() > 0 && player.getLife() <= 0) {
             melano.setlife(100);
             player.setlife(100);
-            
+
             DefeatMelano defeatMelano = new DefeatMelano();
             this.dispose();
             defeatMelano.setVisible(true);
