@@ -3,40 +3,54 @@
  */
 package view.playerVsPlayer;
 
-import characters.players.Player;
-import view.battle.*;
+import characters.players.Player; 
 import view.playerVsPlayer.victory.VictoryPlayer01;
 import view.playerVsPlayer.victory.VictoryPlayer02;
 import characters.players.Player01;
 import characters.players.Player02;
 import logic.Game;
-import logic.RobotAttack;
+import view.battle.gif.SwordGif;
+import view.playerVsPlayer.draw.DrawPlayerVsPlayer;
 
 public class BattlePlayerVsPlayer extends javax.swing.JFrame {
 
     public Player01 player01;
     public Player02 player02;
-    public RobotAttack robotAttack = new RobotAttack();
 
     public BattlePlayerVsPlayer(Player p01, Player p02) {
-
         initComponents();
+
+        player01 = new Player01(p01.getName(), p01.getLife(), p01.getBaseAttack(), p01.getLowerAttack(), p01.getRangedAttack(), p01.getPowerAttack());
+        player02 = new Player02(p02.getName(), p02.getLife(), p02.getBaseAttack(), p02.getLowerAttack(), p02.getRangedAttack(), p02.getPowerAttack());
         
-        player01 = new Player01( p01.getName() ,p01.getLife(),p01.getBaseAttack(), p01.getLowerAttack(), p01.getRangedAttack(), p01.getPowerAttack());
-        player02 = new Player02( p02.getName() ,p02.getLife(),p02.getBaseAttack(), p02.getLowerAttack(), p02.getRangedAttack(), p02.getPowerAttack());
-   
+        player01Name.setText(player01.getName());
         player01Life.setText(Double.toString(player01.getLife()));
         player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
         player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
         player01RangedAttack.setText(Double.toString(player01.getRangedAttack()));
         player01BaseAttack.setText(Double.toString(player01.getBaseAttack()));
 
+        
+        player02Name.setText(player01.getName());
         player02Life.setText(Double.toString(player02.getLife()));
         player02PowerAttack.setText(Double.toString(player02.getPowerAttack()));
         player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
         player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
         player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
-
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
+            this.dispose();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
+            this.dispose();
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -51,6 +65,8 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         buttonPowerBladePlayer02 = new javax.swing.JButton();
         buttonBladeThrowPlayer02 = new javax.swing.JButton();
         buttonSpabPlayer02 = new javax.swing.JButton();
+        player02Name = new javax.swing.JLabel();
+        player01Name = new javax.swing.JLabel();
         player01LowerAttack = new javax.swing.JLabel();
         player01PowerAttack = new javax.swing.JLabel();
         player01BaseAttack = new javax.swing.JLabel();
@@ -138,6 +154,16 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         getContentPane().add(buttonSpabPlayer02);
         buttonSpabPlayer02.setBounds(830, 10, 120, 40);
 
+        player02Name.setFont(new java.awt.Font("Samurai", 0, 24)); // NOI18N
+        player02Name.setText("PLayer02");
+        getContentPane().add(player02Name);
+        player02Name.setBounds(620, 110, 210, 60);
+
+        player01Name.setFont(new java.awt.Font("Samurai", 0, 24)); // NOI18N
+        player01Name.setText("jLabel1");
+        getContentPane().add(player01Name);
+        player01Name.setBounds(300, 120, 210, 60);
+
         player01LowerAttack.setBackground(new java.awt.Color(0, 0, 0));
         player01LowerAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         getContentPane().add(player01LowerAttack);
@@ -198,6 +224,9 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonSwordStrikePlayer01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSwordStrikePlayer01ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
         player02.setlife(Game.lowerAttack(player01.getLowerAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
 
@@ -212,28 +241,28 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
         player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
         player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
-
-        if ((player02.getLife() <= 0) || (player02.getLife() <= 0 && player01.getLife() <= 0)) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 victoryplayer02 = new VictoryPlayer02();
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
             this.dispose();
-            victoryplayer02.setVisible(true);
-        } else if (player02.getLife() > 0 && player01.getLife() <= 0) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 Victoryplayer02 = new VictoryPlayer02();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
             this.dispose();
-            Victoryplayer02.setVisible(true);
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
         }
     }//GEN-LAST:event_buttonSwordStrikePlayer01ActionPerformed
 
     private void buttonBladeThrowPlayer01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBladeThrowPlayer01ActionPerformed
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
         player02.setlife(Game.rangedAttack(player01.getRangedAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
-        RobotAttack.enamyAttack("player02", player01);
 
         player01Life.setText(Double.toString(player01.getLife()));
         player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
@@ -246,28 +275,29 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
         player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
         player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
-
-        if ((player02.getLife() <= 0) || (player02.getLife() <= 0 && player01.getLife() <= 0)) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 victoryplayer02 = new VictoryPlayer02();
+        
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
             this.dispose();
-            victoryplayer02.setVisible(true);
-        } else if (player02.getLife() > 0 && player01.getLife() <= 0) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 Victoryplayer02 = new VictoryPlayer02();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
             this.dispose();
-            Victoryplayer02.setVisible(true);
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
         }
     }//GEN-LAST:event_buttonBladeThrowPlayer01ActionPerformed
 
     private void buttonPowerBladePlayer01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPowerBladePlayer01ActionPerformed
-        player02.setlife(Game.baseAttack(player01.getBaseAttack(), player02.getLife()));
-        System.out.println("vida: " + player02.getLife());
-        RobotAttack.enamyAttack("player02", player01);
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player02.setlife(Game.powerAttack(player01.getPowerAttack(), player02.getLife()));
+        System.out.println("vida: " + player02.getLife()); 
 
         player01Life.setText(Double.toString(player01.getLife()));
         player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
@@ -280,33 +310,30 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
         player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
         player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
-
-        if ((player02.getLife() <= 0) || (player02.getLife() <= 0 && player01.getLife() <= 0)) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 victoryplayer02 = new VictoryPlayer02();
+        
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
             this.dispose();
-            victoryplayer02.setVisible(true);
-        } else if (player02.getLife() > 0 && player01.getLife() <= 0) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 Victoryplayer02 = new VictoryPlayer02();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
             this.dispose();
-            Victoryplayer02.setVisible(true);
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
         }
     }//GEN-LAST:event_buttonPowerBladePlayer01ActionPerformed
 
     private void buttonSpabPlayer01ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSpabPlayer01ActionPerformed
-        player02.setlife(Game.powerAttack(player01.getPowerAttack(), player02.getLife()));
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player02.setlife(Game.baseAttack(player01.getBaseAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
-        RobotAttack.enamyAttack("player02", player01);
-        
-        String str = "" + player01.getLife();
 
-        System.out.println(str);
-        
         player01Life.setText(Double.toString(player01.getLife()));
         player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
         player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
@@ -318,38 +345,159 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
         player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
         player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
-
-        if ((player02.getLife() <= 0) || (player02.getLife() <= 0 && player01.getLife() <= 0)) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 victoryplayer02 = new VictoryPlayer02();
+        
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
             this.dispose();
-            victoryplayer02.setVisible(true);
-        } else if (player02.getLife() > 0 && player01.getLife() <= 0) {
-            player02.setlife(100);
-            player01.setlife(100);
-
-            VictoryPlayer02 Victoryplayer02 = new VictoryPlayer02();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
             this.dispose();
-            Victoryplayer02.setVisible(true);
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
         }
     }//GEN-LAST:event_buttonSpabPlayer01ActionPerformed
 
     private void buttonSwordStrikePlayer02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSwordStrikePlayer02ActionPerformed
-        // TODO add your handling code here:
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player01.setlife(Game.lowerAttack(player02.getLowerAttack(), player01.getLife()));
+        System.out.println("vida: " + player01.getLife());
+
+        player02Life.setText(Double.toString(player02.getLife()));
+        player02PowerAttack.setText(Double.toString(player02.getPowerAttack()));
+        player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
+        player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
+        player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
+
+        player01Life.setText(Double.toString(player01.getLife()));
+        player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
+        player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
+        player01RangedAttack.setText(Double.toString(player01.getRangedAttack()));
+        player01BaseAttack.setText(Double.toString(player01.getBaseAttack()));
+        
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
+            this.dispose();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
+            this.dispose();
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
+        }
     }//GEN-LAST:event_buttonSwordStrikePlayer02ActionPerformed
 
     private void buttonPowerBladePlayer02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPowerBladePlayer02ActionPerformed
-        // TODO add your handling code here:
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player01.setlife(Game.powerAttack(player02.getPowerAttack(), player01.getLife()));
+        System.out.println("vida: " + player01.getLife());
+
+        player02Life.setText(Double.toString(player02.getLife()));
+        player02PowerAttack.setText(Double.toString(player02.getPowerAttack()));
+        player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
+        player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
+        player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
+
+        player01Life.setText(Double.toString(player01.getLife()));
+        player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
+        player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
+        player01RangedAttack.setText(Double.toString(player01.getRangedAttack()));
+        player01BaseAttack.setText(Double.toString(player01.getBaseAttack()));
+
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
+            this.dispose();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
+            this.dispose();
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
+        }
     }//GEN-LAST:event_buttonPowerBladePlayer02ActionPerformed
 
     private void buttonBladeThrowPlayer02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBladeThrowPlayer02ActionPerformed
-        // TODO add your handling code here:
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player01.setlife(Game.rangedAttack(player02.getRangedAttack(), player01.getLife()));
+        System.out.println("vida: " + player01.getLife());
+
+        player02Life.setText(Double.toString(player02.getLife()));
+        player02PowerAttack.setText(Double.toString(player02.getPowerAttack()));
+        player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
+        player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
+        player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
+
+        player01Life.setText(Double.toString(player01.getLife()));
+        player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
+        player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
+        player01RangedAttack.setText(Double.toString(player01.getRangedAttack()));
+        player01BaseAttack.setText(Double.toString(player01.getBaseAttack()));
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
+            this.dispose();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
+            this.dispose();
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
+        }
     }//GEN-LAST:event_buttonBladeThrowPlayer02ActionPerformed
 
     private void buttonSpabPlayer02ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSpabPlayer02ActionPerformed
-        // TODO add your handling code here:
+        SwordGif swordGif = new SwordGif();
+        swordGif.setVisible(true);
+        
+        player01.setlife(Game.powerAttack(player02.getPowerAttack(), player01.getLife()));
+        System.out.println("vida: " + player01.getLife());
+
+        player02Life.setText(Double.toString(player02.getLife()));
+        player02PowerAttack.setText(Double.toString(player02.getPowerAttack()));
+        player02LowerAttack.setText(Double.toString(player02.getLowerAttack()));
+        player02RangedAttack.setText(Double.toString(player02.getRangedAttack()));
+        player02BaseAttack.setText(Double.toString(player02.getBaseAttack()));
+
+        player01Life.setText(Double.toString(player01.getLife()));
+        player01PowerAttack.setText(Double.toString(player01.getPowerAttack()));
+        player01LowerAttack.setText(Double.toString(player01.getLowerAttack()));
+        player01RangedAttack.setText(Double.toString(player01.getRangedAttack()));
+        player01BaseAttack.setText(Double.toString(player01.getBaseAttack()));
+        
+        if (player01.getLife() > 0 && player02.getLife() <= 0) {
+            VictoryPlayer01 victoryPlayer01 = new VictoryPlayer01(player01);
+            this.dispose();
+            victoryPlayer01.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() > 0) {
+            VictoryPlayer02 victoryPlayer02 = new VictoryPlayer02(player02);
+            this.dispose();
+            victoryPlayer02.setVisible(true);
+        } else if (player01.getLife() <= 0 && player02.getLife() <= 0) {
+            DrawPlayerVsPlayer drawPlayerVsPlayer = new DrawPlayerVsPlayer();
+            this.dispose();
+            drawPlayerVsPlayer.setVisible(true);
+        }
     }//GEN-LAST:event_buttonSpabPlayer02ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -365,11 +513,13 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
     private javax.swing.JLabel player01BaseAttack;
     private javax.swing.JLabel player01Life;
     private javax.swing.JLabel player01LowerAttack;
+    private javax.swing.JLabel player01Name;
     private javax.swing.JLabel player01PowerAttack;
     private javax.swing.JLabel player01RangedAttack;
     private javax.swing.JLabel player02BaseAttack;
     private javax.swing.JLabel player02Life;
     private javax.swing.JLabel player02LowerAttack;
+    private javax.swing.JLabel player02Name;
     private javax.swing.JLabel player02PowerAttack;
     private javax.swing.JLabel player02RangedAttack;
     // End of variables declaration//GEN-END:variables

@@ -2,19 +2,20 @@
  * @author hexcold || (@henrq.p)
  */
 
-package view.playerVsPlayer.victory;
+package view.playerVsPlayer.draw;
 
-import characters.players.Player;
+import view.playerVsPlayer.victory.*;
 import view.MenuMain;
 
-public class VictoryPlayer02 extends javax.swing.JFrame {
+public class DrawPlayerVsPlayer extends javax.swing.JFrame {
     
     
 
-    public VictoryPlayer02(Player player02) {
+    public DrawPlayerVsPlayer() {
         initComponents();
         
-        player01Name.setText(player02.getName());
+        
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -22,7 +23,6 @@ public class VictoryPlayer02 extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        player01Name = new javax.swing.JLabel();
         backgroud = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,12 +38,7 @@ public class VictoryPlayer02 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(430, 370, 170, 40);
 
-        player01Name.setFont(new java.awt.Font("Samurai", 0, 24)); // NOI18N
-        player01Name.setText("jLabel1");
-        getContentPane().add(player01Name);
-        player01Name.setBounds(290, 300, 210, 60);
-
-        backgroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/battle/victory/victoryNaryata.png"))); // NOI18N
+        backgroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/playervsplayer/draw/draw.png"))); // NOI18N
         backgroud.setText("jLabel1");
         getContentPane().add(backgroud);
         backgroud.setBounds(0, 0, 1020, 500);
@@ -61,6 +56,5 @@ public class VictoryPlayer02 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroud;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel player01Name;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,17 +4,17 @@
 
 package view.playerVsPlayer.victory;
 
+import characters.players.Player;
 import view.MenuMain;
 
 public class VictoryPlayer01 extends javax.swing.JFrame {
     
     
 
-    public VictoryPlayer01() {
+    public VictoryPlayer01(Player player01) {
         initComponents();
         
-        
-        
+        player01Name.setText(player01.getName());
     }
 
     @SuppressWarnings("unchecked")
@@ -22,7 +22,7 @@ public class VictoryPlayer01 extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        winner = new javax.swing.JLabel();
+        player01Name = new javax.swing.JLabel();
         backgroud = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,10 +38,10 @@ public class VictoryPlayer01 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(430, 370, 170, 40);
 
-        winner.setFont(new java.awt.Font("Samurai", 0, 14)); // NOI18N
-        winner.setText("jLabel2");
-        getContentPane().add(winner);
-        winner.setBounds(440, 310, 150, 50);
+        player01Name.setFont(new java.awt.Font("Samurai", 0, 24)); // NOI18N
+        player01Name.setText("jLabel1");
+        getContentPane().add(player01Name);
+        player01Name.setBounds(300, 300, 210, 60);
 
         backgroud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/battle/victory/victoryNaryata.png"))); // NOI18N
         backgroud.setText("jLabel1");
@@ -61,6 +61,6 @@ public class VictoryPlayer01 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroud;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel winner;
+    private javax.swing.JLabel player01Name;
     // End of variables declaration//GEN-END:variables
 }

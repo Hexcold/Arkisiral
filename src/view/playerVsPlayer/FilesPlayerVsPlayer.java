@@ -21,6 +21,7 @@ public class FilesPlayerVsPlayer extends javax.swing.JFrame {
         player01 = new Player01("Player01", 100, 10, 15, 20, 30);
         player02 = new Player02("Player02", 100, 10, 15, 20, 30);
         errorsDetected = false;
+        
     }
 
     @SuppressWarnings("unchecked")
