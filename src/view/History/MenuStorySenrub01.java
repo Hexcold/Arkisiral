@@ -4,17 +4,17 @@
 
 package view.History;
 
-import view.battle.BattleSenrub;
 
-public class MenuStorySenrub extends javax.swing.JFrame {
 
-    public MenuStorySenrub() {
+public class MenuStorySenrub01 extends javax.swing.JFrame {
+
+    public MenuStorySenrub01() {
         initComponents();
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
@@ -32,7 +32,7 @@ public class MenuStorySenrub extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(480, 390, 80, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/backgroudHistorySocram.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Story/StorySenrub01.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1020, 500);
@@ -42,9 +42,9 @@ public class MenuStorySenrub extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        BattleSenrub battleSenrub = new BattleSenrub();
+        MenuStorySenrub02 menuStorySenrub02 = new MenuStorySenrub02();
         this.dispose();
-        battleSenrub.setVisible(true);
+        menuStorySenrub02.setVisible(true);
 
     }
 

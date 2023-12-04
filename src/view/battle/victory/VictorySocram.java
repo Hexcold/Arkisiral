@@ -4,8 +4,8 @@
 
 package view.battle.victory;
 
-import view.History.MenuStoryYekmal;
 import logic.save.FileOps;
+import view.History.data.DataYekmal;
 
 public class VictorySocram extends javax.swing.JFrame {
 
@@ -46,9 +46,9 @@ public class VictorySocram extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuStoryYekmal menuStoryYekmal = new MenuStoryYekmal();
+        DataYekmal dataYekmal = new DataYekmal();
         this.dispose();
-        menuStoryYekmal.setVisible(true);
+        dataYekmal.setVisible(true);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

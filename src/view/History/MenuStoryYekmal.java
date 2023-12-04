@@ -1,11 +1,11 @@
 /**
  * @author hexcold || (@henrq.p)
  */
-
 package view.History;
 
+import logic.story.FullStory;
+import view.History.data.DataMelano;
 import view.battle.BattleYekmal;
-
 
 public class MenuStoryYekmal extends javax.swing.JFrame {
 
@@ -42,9 +42,15 @@ public class MenuStoryYekmal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BattleYekmal battleYekmal = new BattleYekmal();
-        this.dispose();
-        battleYekmal.setVisible(true);
+        if (FullStory.getChecker()) {
+            DataMelano dataMelano = new DataMelano();
+            this.dispose();
+            dataMelano.setVisible(true);
+        } else {
+            BattleYekmal battleYekmal = new BattleYekmal();
+            this.dispose();
+            battleYekmal.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

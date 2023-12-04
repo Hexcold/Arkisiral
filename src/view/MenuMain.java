@@ -7,10 +7,9 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import logic.save.Save;
-import view.History.MenuStoryPlayer;
-import view.playerVsPlayer.BattlePlayerVsPlayer;
+import logic.story.FullStory;
+import view.History.data.DataPlayer;
 import view.playerVsPlayer.FilesPlayerVsPlayer;
-import view.battle.gif.SwordGif;
 
 public class MenuMain extends javax.swing.JFrame {
 
@@ -97,7 +96,11 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_contnueActionPerformed
 
     private void storyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_storyActionPerformed
-        
+        FullStory fullStory = new FullStory();
+        fullStory.setChecker(true);
+        DataPlayer dataPlayer = new DataPlayer();
+        this.dispose();
+        dataPlayer.setVisible(true);
     }//GEN-LAST:event_storyActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
@@ -111,9 +114,9 @@ public class MenuMain extends javax.swing.JFrame {
     }//GEN-LAST:event_playerVsPlayerActionPerformed
 
     private void startGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startGameActionPerformed
-        MenuStoryPlayer menuStoryPlayer = new MenuStoryPlayer();
+        DataPlayer dataPlayer = new DataPlayer();
         this.dispose();
-        menuStoryPlayer.setVisible(true);
+        dataPlayer.setVisible(true);
     }//GEN-LAST:event_startGameActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,62 +1,68 @@
 /*
  * @author hexcold || (@henrq.p)
  */
-
 package logic.save;
 
 import java.io.IOException;
-
-import view.History.MenuStoryPlayer;
-import view.History.MenuStoryNaryata;
-import view.History.MenuStorySocram;
-import view.History.MenuStoryMelano;
-import view.History.MenuStorySenrub;
-import view.History.MenuStoryYekmal;
+import javax.swing.JOptionPane;
+import view.History.data.DataMelano;
+import view.History.data.DataNaryata;
+import view.History.data.DataPlayer;
+import view.History.data.DataSenrub;
+import view.History.data.DataSocram;
+import view.History.data.DataYekmal;
 import view.MenuMain;
-        
 
 public class Save {
 
-
     public static void game() throws IOException {
-        String inputUser = null;
+        try {
+            switch (FileOps.cont()) {
 
-        switch (FileOps.cont()) {
-            
-            case "0" -> {
-                MenuStoryPlayer menuStoryPlayer = new MenuStoryPlayer();
-                menuStoryPlayer.setVisible(true);
+                case "0" -> {
+                    DataPlayer dataPlayer = new DataPlayer();
+                    dataPlayer.setVisible(true);
+                }
+
+                case "1" -> {
+                    DataNaryata dataNaryata = new DataNaryata();
+                    dataNaryata.setVisible(true);
+                }
+
+                case "2" -> {
+                    DataSocram dataSocram = new DataSocram();
+                    dataSocram.setVisible(true);
+                }
+
+                case "3" -> {
+                    DataYekmal dataYekmal = new DataYekmal();
+                    dataYekmal.setVisible(true);
+                }
+
+                case "4" -> {
+                    DataMelano dataMelano = new DataMelano();
+                    dataMelano.setVisible(true);
+                }
+
+                case "5" -> {
+                    DataSenrub dataSenrub = new DataSenrub();
+                    dataSenrub.setVisible(true);
+                }
+
+                default -> {
+                    FileOps.write("0");
+                    MenuMain menuMain = new MenuMain();
+                    menuMain.setVisible(true);
+                    System.err.println("fail: Não foi possível carregar o save. Tente novamente");
+                    JOptionPane.showMessageDialog(null, "fail: Não foi possível carregar o save. Tente novamente");
+                }
             }
 
-            case "1" -> {
-                MenuStoryNaryata menuStoryNaryata = new MenuStoryNaryata();
-                menuStoryNaryata.setVisible(true);
-            }
-
-            case "2" -> {
-                MenuStorySocram menuStorySocram = new MenuStorySocram();
-                menuStorySocram.setVisible(true);
-            }
-
-            case "3" -> {
-                MenuStoryYekmal menuStoryYekmal = new MenuStoryYekmal();
-                menuStoryYekmal.setVisible(true);
-            }
-
-            case "4" -> { 
-                MenuStoryMelano menuStoryMelano = new MenuStoryMelano();
-                menuStoryMelano.setVisible(true);
-            }
-                
-            case "5" -> { 
-                MenuStorySenrub menuStorySenrub = new MenuStorySenrub();
-                menuStorySenrub.setVisible(true);
-            }
-
-            default -> {
-                MenuMain manuMain = new MenuMain();
-                System.out.println("Não foi possível carregar o jogo.");
-            }
+        } catch (NumberFormatException e) {
+            System.err.println("fail: Não foi possível carregar o save. " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "fail: Não foi possível carregar o save. " + e.getMessage());
         }
+
     }
 }
+

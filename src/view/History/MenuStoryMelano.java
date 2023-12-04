@@ -1,9 +1,10 @@
 /**
  * @author hexcold || (@henrq.p)
  */
-
 package view.History;
 
+import logic.story.FullStory;
+import view.History.data.DataSenrub;
 import view.battle.BattleMelano;
 
 public class MenuStoryMelano extends javax.swing.JFrame {
@@ -41,9 +42,15 @@ public class MenuStoryMelano extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BattleMelano battleMelano = new BattleMelano();
-        this.dispose();
-        battleMelano.setVisible(true);
+        if (FullStory.getChecker()) {
+            DataSenrub dataSenrub = new DataSenrub();
+            this.dispose();
+            dataSenrub.setVisible(true);
+        } else {
+            BattleMelano battleMelano = new BattleMelano();
+            this.dispose();
+            battleMelano.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -1,10 +1,11 @@
 /**
  * @author hexcold || (@henrq.p)
  */
-
 package view.History;
 
 import view.battle.BattleNaryata;
+import logic.story.FullStory;
+import view.History.data.DataSocram;
 
 public class MenuStoryNaryata extends javax.swing.JFrame {
 
@@ -41,9 +42,16 @@ public class MenuStoryNaryata extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BattleNaryata battleNaryata = new BattleNaryata();
-        this.dispose();
-        battleNaryata.setVisible(true);
+
+        if (FullStory.getChecker()) {
+            DataSocram dataSocram = new DataSocram();
+            this.dispose();
+            dataSocram.setVisible(true);
+        } else {
+            BattleNaryata battleNaryata = new BattleNaryata();
+            this.dispose();
+            battleNaryata.setVisible(true);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

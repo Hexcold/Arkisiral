@@ -4,7 +4,6 @@
 
 package view.playerVsPlayer.draw;
 
-import view.playerVsPlayer.victory.*;
 import view.MenuMain;
 
 public class DrawPlayerVsPlayer extends javax.swing.JFrame {
@@ -13,8 +12,6 @@ public class DrawPlayerVsPlayer extends javax.swing.JFrame {
 
     public DrawPlayerVsPlayer() {
         initComponents();
-        
-        
         
     }
 

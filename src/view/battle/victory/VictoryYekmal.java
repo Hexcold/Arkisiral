@@ -4,8 +4,8 @@
 
 package view.battle.victory;
 
-import view.History.MenuStoryMelano;
 import logic.save.FileOps;
+import view.History.data.DataMelano;
 
 public class VictoryYekmal extends javax.swing.JFrame {
 
@@ -45,9 +45,9 @@ public class VictoryYekmal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuStoryMelano menuStoryMelano = new MenuStoryMelano();
+        DataMelano dataMelano = new DataMelano();
         this.dispose();
-        menuStoryMelano.setVisible(true);
+        dataMelano.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -4,7 +4,7 @@
 
 package view.battle.victory;
 
-import view.History.MenuStorySenrub;
+import view.History.data.DataSenrub;
 import logic.save.FileOps;
 
 public class VictoryMelano extends javax.swing.JFrame {
@@ -45,9 +45,9 @@ public class VictoryMelano extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuStorySenrub menuStorySenrub = new MenuStorySenrub();
+        DataSenrub dataSenrub = new DataSenrub();
         this.dispose();
-        menuStorySenrub.setVisible(true);
+        dataSenrub.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

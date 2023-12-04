@@ -3,8 +3,8 @@
  */
 package view.battle;
 
-import characters.players.Player01;
 import characters.adversary.Senrub;
+import characters.players.Player01;
 import logic.Game;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatSenrub;
@@ -13,9 +13,9 @@ import view.battle.victory.VictorySenrub;
 
 public class BattleSenrub extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
-    public static Senrub senrub = new Senrub();
-    public static RobotAttack robotAttack = new RobotAttack();
+    public Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
+    public Senrub senrub = new Senrub();
+    public RobotAttack robotAttack = new RobotAttack();
 
     public BattleSenrub() {
         initComponents();
@@ -140,7 +140,7 @@ public class BattleSenrub extends javax.swing.JFrame {
         getContentPane().add(enemyLife);
         enemyLife.setBounds(670, 190, 37, 16);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/battle/enemysenrub.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/battle/enemyNaryata.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 1020, 500);
@@ -192,7 +192,7 @@ public class BattleSenrub extends javax.swing.JFrame {
 
         senrub.setlife(Game.rangedAttack(player.getRangedAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
-        RobotAttack.enamyAttack(senrub.getName(), player);
+        RobotAttack.enamyAttack("senrub", player);
 
         youLife.setText(Double.toString(player.getLife()));
         youPowerAttack.setText(Double.toString(player.getPowerAttack()));
@@ -229,7 +229,7 @@ public class BattleSenrub extends javax.swing.JFrame {
 
         senrub.setlife(Game.baseAttack(player.getBaseAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
-        RobotAttack.enamyAttack(senrub.getName(), player);
+        RobotAttack.enamyAttack("senrub", player);
 
         youLife.setText(Double.toString(player.getLife()));
         youPowerAttack.setText(Double.toString(player.getPowerAttack()));
@@ -247,16 +247,16 @@ public class BattleSenrub extends javax.swing.JFrame {
             senrub.setlife(100);
             player.setlife(100);
 
-            VictorySenrub victorysenrub = new VictorySenrub();
+            VictorySenrub victorySenrub = new VictorySenrub();
             this.dispose();
-            victorysenrub.setVisible(true);
+            victorySenrub.setVisible(true);
         } else if (senrub.getLife() > 0 && player.getLife() <= 0) {
             senrub.setlife(100);
             player.setlife(100);
 
-            DefeatSenrub defeatsenrub = new DefeatSenrub();
+            DefeatSenrub defeatSenrub = new DefeatSenrub();
             this.dispose();
-            defeatsenrub.setVisible(true);
+            defeatSenrub.setVisible(true);
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -266,7 +266,11 @@ public class BattleSenrub extends javax.swing.JFrame {
 
         senrub.setlife(Game.powerAttack(player.getPowerAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
-        RobotAttack.enamyAttack(senrub.getName(), player);
+        RobotAttack.enamyAttack("senrub", player);
+
+        String str = "" + player.getLife();
+
+        System.out.println(str);
 
         youLife.setText(Double.toString(player.getLife()));
         youPowerAttack.setText(Double.toString(player.getPowerAttack()));
@@ -296,7 +300,6 @@ public class BattleSenrub extends javax.swing.JFrame {
             defeatSenrub.setVisible(true);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enemyBaseAttack;

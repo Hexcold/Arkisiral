@@ -4,9 +4,8 @@
 
 package view.battle.victory;
 
-
-import view.History.MenuStorySocram;
 import logic.save.FileOps;
+import view.History.data.DataSocram;
 
 public class VictoryNaryata extends javax.swing.JFrame {
 
@@ -47,9 +46,9 @@ public class VictoryNaryata extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuStorySocram menuStorySocram = new MenuStorySocram();
+        DataSocram dataSocram = new DataSocram();
         this.dispose();
-        menuStorySocram.setVisible(true);
+        dataSocram.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -1,9 +1,10 @@
 /**
  * @author hexcold || (@henrq.p)
  */
-
 package view.History;
 
+import logic.story.FullStory;
+import view.History.data.DataYekmal;
 import view.battle.BattleSocram;
 
 public class MenuStorySocram extends javax.swing.JFrame {
@@ -41,9 +42,17 @@ public class MenuStorySocram extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BattleSocram battleSocram = new BattleSocram();
-        this.dispose();
-        battleSocram.setVisible(true);
+        if (FullStory.getChecker()) {
+            DataYekmal dataYekmal = new DataYekmal();
+            this.dispose();
+            dataYekmal.setVisible(true);
+        } else {
+            BattleSocram battleSocram = new BattleSocram();
+            this.dispose();
+            battleSocram.setVisible(true);
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

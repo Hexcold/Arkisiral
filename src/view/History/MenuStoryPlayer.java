@@ -4,6 +4,8 @@
 
 package view.History;
 
+import view.History.data.DataNaryata;
+
 public class MenuStoryPlayer extends javax.swing.JFrame {
 
     public MenuStoryPlayer() {
@@ -39,9 +41,9 @@ public class MenuStoryPlayer extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MenuStoryNaryata menuStoryNaryata = new MenuStoryNaryata();
+        DataNaryata dataNaryata = new DataNaryata();
         this.dispose();
-        menuStoryNaryata.setVisible(true);
+        dataNaryata.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

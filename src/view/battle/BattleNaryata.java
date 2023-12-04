@@ -13,9 +13,9 @@ import view.battle.victory.VictoryNaryata;
 
 public class BattleNaryata extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
-    public static Naryata naryata = new Naryata();
-    public static RobotAttack robotAttack = new RobotAttack();
+    public Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
+    public Naryata naryata = new Naryata();
+    public RobotAttack robotAttack = new RobotAttack();
 
     public BattleNaryata() {
         initComponents();
