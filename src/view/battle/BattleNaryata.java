@@ -84,61 +84,61 @@ public class BattleNaryata extends javax.swing.JFrame {
         youLowerAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         youLowerAttack.setText("100");
         getContentPane().add(youLowerAttack);
-        youLowerAttack.setBounds(440, 270, 37, 16);
+        youLowerAttack.setBounds(440, 270, 140, 16);
 
         youPowerAttack.setBackground(new java.awt.Color(0, 0, 0));
         youPowerAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         youPowerAttack.setText("100");
         getContentPane().add(youPowerAttack);
-        youPowerAttack.setBounds(420, 340, 37, 16);
+        youPowerAttack.setBounds(420, 340, 160, 16);
 
         youBaseAttack.setBackground(new java.awt.Color(0, 0, 0));
         youBaseAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         youBaseAttack.setText("100");
         getContentPane().add(youBaseAttack);
-        youBaseAttack.setBounds(330, 230, 37, 16);
+        youBaseAttack.setBounds(330, 230, 240, 16);
 
         youRangedAttack.setBackground(new java.awt.Color(0, 0, 0));
         youRangedAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         youRangedAttack.setText("100");
         getContentPane().add(youRangedAttack);
-        youRangedAttack.setBounds(420, 300, 37, 16);
+        youRangedAttack.setBounds(420, 300, 160, 16);
 
         youLife.setBackground(new java.awt.Color(0, 0, 0));
         youLife.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         youLife.setText("100");
         getContentPane().add(youLife);
-        youLife.setBounds(330, 190, 37, 16);
+        youLife.setBounds(330, 190, 250, 16);
 
         enemyLowerAttack.setBackground(new java.awt.Color(0, 0, 0));
         enemyLowerAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         enemyLowerAttack.setText("100");
         getContentPane().add(enemyLowerAttack);
-        enemyLowerAttack.setBounds(780, 270, 37, 16);
+        enemyLowerAttack.setBounds(780, 270, 180, 16);
 
         enemyPowerAttack.setBackground(new java.awt.Color(0, 0, 0));
         enemyPowerAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         enemyPowerAttack.setText("100");
         getContentPane().add(enemyPowerAttack);
-        enemyPowerAttack.setBounds(760, 340, 37, 16);
+        enemyPowerAttack.setBounds(760, 340, 200, 16);
 
         enemyBaseAttack.setBackground(new java.awt.Color(0, 0, 0));
         enemyBaseAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         enemyBaseAttack.setText("100");
         getContentPane().add(enemyBaseAttack);
-        enemyBaseAttack.setBounds(670, 230, 37, 16);
+        enemyBaseAttack.setBounds(670, 230, 160, 16);
 
         enemyRangedAttack.setBackground(new java.awt.Color(0, 0, 0));
         enemyRangedAttack.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         enemyRangedAttack.setText("100");
         getContentPane().add(enemyRangedAttack);
-        enemyRangedAttack.setBounds(760, 300, 37, 16);
+        enemyRangedAttack.setBounds(760, 300, 210, 16);
 
         enemyLife.setBackground(new java.awt.Color(0, 0, 0));
         enemyLife.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         enemyLife.setText("100");
         getContentPane().add(enemyLife);
-        enemyLife.setBounds(670, 190, 37, 16);
+        enemyLife.setBounds(670, 190, 160, 16);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/battle/enemyNaryata.png"))); // NOI18N
         jLabel1.setText("jLabel1");

@@ -6,6 +6,7 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/BattleYekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/RandomAttack.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/victory/VictorySocram.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStorySenrub02.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/playerVsPlayer/draw/DrawPlayerVsPlayer.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatSocram.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/BattleSenrub.java</file>
@@ -13,7 +14,9 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryMelano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Socram.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/gif/SwordGif.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStorySenrub01.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/Story/Data/DataNaryata.png</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataPlayer.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/playerVsPlayer/victory/VictoryPlayer01.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/MenuMain.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/battle/gif/sword.gif</file>
@@ -25,9 +28,14 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/victory/VictoryNaryata.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/players/Player01.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStorySocram.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataSenrub.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataNaryata.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataMelano.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataYekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/Story/Data/DataSenrub.png</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/victory/VictorySenrub.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryParte02.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataSocram.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Melano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/players/Player02.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/RobotAttack.java</file>
@@ -36,7 +44,6 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/BattleMelano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryNaryata.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryYekmal.java</file>
-            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStorySenrub.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/BattleNaryata.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Naryata.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatSenrub.java</file>
@@ -45,6 +52,7 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Yekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/playerVsPlayer/BattlePlayerVsPlayer.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/playervsplayer/victory/victoryPlayer02.png</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStorySenrub03.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/victory/VictoryMelano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/players/Player.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryPlayer.java</file>
@@ -52,6 +60,7 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatYekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Senrub.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/Game.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/story/FullStory.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/playervsplayer/victory/victoryPlayer01.png</file>
         </group>
     </open-files>
