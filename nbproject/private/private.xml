@@ -34,7 +34,6 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataYekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/Story/Data/DataSenrub.png</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/victory/VictorySenrub.java</file>
-            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/MenuStoryParte02.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/History/data/DataSocram.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Melano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/players/Player02.java</file>
@@ -49,6 +48,7 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatSenrub.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/BattleSocram.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Adversary.java</file>
+            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/CheckGame.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Yekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/playerVsPlayer/BattlePlayerVsPlayer.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/playervsplayer/victory/victoryPlayer02.png</file>
@@ -59,7 +59,6 @@
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatMelano.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/view/battle/defeat/DefeatYekmal.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/characters/adversary/Senrub.java</file>
-            <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/Game.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/story/FullStory.java</file>
             <file>file:/C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/img/playervsplayer/victory/victoryPlayer01.png</file>
         </group>

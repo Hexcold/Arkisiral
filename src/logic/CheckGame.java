@@ -6,7 +6,7 @@ package logic;
 
 
 
-public class Game {
+public class CheckGame {
 
     public static boolean checkLife(double lifePlayer, double lifeAdversary) {
         if (lifePlayer <= 0) {
@@ -29,8 +29,8 @@ public class Game {
         return life;
     }
 
-    public static double lowerAttack(double powerAttack, double lifeAdversary) {
-        double life = RandomAttack.lowerPercentage(powerAttack, lifeAdversary);
+    public static double lowerAttack(double lowerAttack, double lifeAdversary) {
+        double life = RandomAttack.lowerPercentage(lowerAttack, lifeAdversary);
         System.out.println(life);
         if (life < 0) {
             life = 0;

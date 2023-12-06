@@ -1,14 +1,19 @@
 /*
  * @author hexcold || (@henrq.p)
  */
-
-
 package characters.adversary;
 
 
 public class Senrub extends Adversary {
 
     public Senrub() {
-        super("Senrub",100, 10, 15, 20, 30);
+        super("Senrub",1500, 40, 55, 45, 60);
     }
+    
+    @Override
+    public double getLife() {
+        return this.life - 2;
+    }
+    
+    
 }

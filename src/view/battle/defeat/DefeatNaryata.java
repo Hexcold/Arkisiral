@@ -4,7 +4,7 @@
 
 package view.battle.defeat;
 
-import view.battle.BattleMelano;
+import view.battle.BattleNaryata;
 
 public class DefeatNaryata extends javax.swing.JFrame {
 
@@ -42,9 +42,9 @@ public class DefeatNaryata extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        BattleMelano battleMelano = new BattleMelano();
+        BattleNaryata battleNaryata = new BattleNaryata();
         this.dispose();
-        battleMelano.setVisible(true);      
+        battleNaryata.setVisible(true);      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

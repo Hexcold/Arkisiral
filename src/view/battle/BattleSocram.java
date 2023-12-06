@@ -5,7 +5,7 @@ package view.battle;
 
 import characters.adversary.Socram;
 import characters.players.Player01;
-import logic.Game;
+import logic.CheckGame;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatSocram;
 import view.battle.gif.SwordGif;
@@ -13,12 +13,24 @@ import view.battle.victory.VictorySocram;
 
 public class BattleSocram extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
+    public static Player01 player = new Player01("Player", 110, 10, 15, 20, 30);
     public static Socram socram = new Socram();
     public static RobotAttack robotAttack = new RobotAttack();
 
     public BattleSocram() {
         initComponents();
+        
+        youLife.setText(Double.toString(player.getLife()));
+        youPowerAttack.setText(Double.toString(player.getPowerAttack()));
+        youLowerAttack.setText(Double.toString(player.getLowerAttack()));
+        youRangedAttack.setText(Double.toString(player.getRangedAttack()));
+        youBaseAttack.setText(Double.toString(player.getBaseAttack()));
+
+        enemyLife.setText(Double.toString(socram.getLife()));
+        enemyPowerAttack.setText(Double.toString(socram.getPowerAttack()));
+        enemyLowerAttack.setText(Double.toString(socram.getLowerAttack()));
+        enemyRangedAttack.setText(Double.toString(socram.getRangedAttack()));
+        enemyBaseAttack.setText(Double.toString(socram.getBaseAttack()));
     }
 
     @SuppressWarnings("unchecked")
@@ -153,7 +165,7 @@ public class BattleSocram extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        socram.setlife(Game.lowerAttack(player.getLowerAttack(), socram.getLife()));
+        socram.setlife(CheckGame.lowerAttack(player.getLowerAttack(), socram.getLife()));
         System.out.println("vida: " + socram.getLife());
         RobotAttack.enamyAttack(socram.getName(), player);
 
@@ -190,7 +202,7 @@ public class BattleSocram extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        socram.setlife(Game.rangedAttack(player.getRangedAttack(), socram.getLife()));
+        socram.setlife(CheckGame.rangedAttack(player.getRangedAttack(), socram.getLife()));
         System.out.println("vida: " + socram.getLife());
         RobotAttack.enamyAttack(socram.getName(), player);
 
@@ -227,7 +239,7 @@ public class BattleSocram extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        socram.setlife(Game.powerAttack(player.getBaseAttack(), socram.getLife()));
+        socram.setlife(CheckGame.powerAttack(player.getBaseAttack(), socram.getLife()));
         System.out.println("vida: " + socram.getLife());
         RobotAttack.enamyAttack(socram.getName(), player);
 
@@ -264,7 +276,7 @@ public class BattleSocram extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        socram.setlife(Game.baseAttack(player.getPowerAttack(), socram.getLife()));
+        socram.setlife(CheckGame.baseAttack(player.getPowerAttack(), socram.getLife()));
         System.out.println("vida: " + socram.getLife());
         RobotAttack.enamyAttack(socram.getName(), player);
 

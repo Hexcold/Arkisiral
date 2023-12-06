@@ -1,7 +1,8 @@
-package logic.story;
 /*
  * @author hexcold || (@henrq.p)
  */
+
+package logic.story;
 
 public class FullStory {
     

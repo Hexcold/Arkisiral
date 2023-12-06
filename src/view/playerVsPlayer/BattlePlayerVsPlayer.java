@@ -8,7 +8,7 @@ import view.playerVsPlayer.victory.VictoryPlayer01;
 import view.playerVsPlayer.victory.VictoryPlayer02;
 import characters.players.Player01;
 import characters.players.Player02;
-import logic.Game;
+import logic.CheckGame;
 import view.battle.gif.SwordGif;
 import view.playerVsPlayer.draw.DrawPlayerVsPlayer;
 
@@ -227,7 +227,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player02.setlife(Game.lowerAttack(player01.getLowerAttack(), player02.getLife()));
+        player02.setlife(CheckGame.lowerAttack(player01.getLowerAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
 
         player01Life.setText(Double.toString(player01.getLife()));
@@ -261,7 +261,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player02.setlife(Game.rangedAttack(player01.getRangedAttack(), player02.getLife()));
+        player02.setlife(CheckGame.rangedAttack(player01.getRangedAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
 
         player01Life.setText(Double.toString(player01.getLife()));
@@ -296,7 +296,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player02.setlife(Game.powerAttack(player01.getPowerAttack(), player02.getLife()));
+        player02.setlife(CheckGame.powerAttack(player01.getPowerAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife()); 
 
         player01Life.setText(Double.toString(player01.getLife()));
@@ -331,7 +331,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player02.setlife(Game.baseAttack(player01.getBaseAttack(), player02.getLife()));
+        player02.setlife(CheckGame.baseAttack(player01.getBaseAttack(), player02.getLife()));
         System.out.println("vida: " + player02.getLife());
 
         player01Life.setText(Double.toString(player01.getLife()));
@@ -366,7 +366,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player01.setlife(Game.lowerAttack(player02.getLowerAttack(), player01.getLife()));
+        player01.setlife(CheckGame.lowerAttack(player02.getLowerAttack(), player01.getLife()));
         System.out.println("vida: " + player01.getLife());
 
         player02Life.setText(Double.toString(player02.getLife()));
@@ -401,7 +401,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player01.setlife(Game.powerAttack(player02.getPowerAttack(), player01.getLife()));
+        player01.setlife(CheckGame.powerAttack(player02.getPowerAttack(), player01.getLife()));
         System.out.println("vida: " + player01.getLife());
 
         player02Life.setText(Double.toString(player02.getLife()));
@@ -436,7 +436,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player01.setlife(Game.rangedAttack(player02.getRangedAttack(), player01.getLife()));
+        player01.setlife(CheckGame.rangedAttack(player02.getRangedAttack(), player01.getLife()));
         System.out.println("vida: " + player01.getLife());
 
         player02Life.setText(Double.toString(player02.getLife()));
@@ -470,7 +470,7 @@ public class BattlePlayerVsPlayer extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
         
-        player01.setlife(Game.powerAttack(player02.getPowerAttack(), player01.getLife()));
+        player01.setlife(CheckGame.powerAttack(player02.getPowerAttack(), player01.getLife()));
         System.out.println("vida: " + player01.getLife());
 
         player02Life.setText(Double.toString(player02.getLife()));

@@ -12,5 +12,10 @@ public class Player02 extends Player{
         super(name, life, baseAttack, lowerAttack, rangedAttack, powerAttack);
     }
 
+    
+    @Override
+    public double getLife() {
+        return this.life;
+    }
 }
 

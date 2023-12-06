@@ -5,7 +5,7 @@ package view.battle;
 
 import characters.players.Player01;
 import characters.adversary.Melano;
-import logic.Game;
+import logic.CheckGame;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatMelano;
 import view.battle.gif.SwordGif;
@@ -13,12 +13,24 @@ import view.battle.victory.VictoryMelano;
 
 public class BattleMelano extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01("Player01", 100, 10, 15, 20, 30);
+    public static Player01 player = new Player01("Player01", 140, 10, 15, 20, 30);
     public static Melano melano = new Melano();
     public static RobotAttack robotAttack = new RobotAttack();
 
     public BattleMelano() {
         initComponents();
+        
+        youLife.setText(Double.toString(player.getLife()));
+        youPowerAttack.setText(Double.toString(player.getPowerAttack()));
+        youLowerAttack.setText(Double.toString(player.getLowerAttack()));
+        youRangedAttack.setText(Double.toString(player.getRangedAttack()));
+        youBaseAttack.setText(Double.toString(player.getBaseAttack()));
+
+        enemyLife.setText(Double.toString(melano.getLife()));
+        enemyPowerAttack.setText(Double.toString(melano.getPowerAttack()));
+        enemyLowerAttack.setText(Double.toString(melano.getLowerAttack()));
+        enemyRangedAttack.setText(Double.toString(melano.getRangedAttack()));
+        enemyBaseAttack.setText(Double.toString(melano.getBaseAttack()));
     }
 
     @SuppressWarnings("unchecked")
@@ -153,7 +165,7 @@ public class BattleMelano extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        melano.setlife(Game.lowerAttack(player.getLowerAttack(), melano.getLife()));
+        melano.setlife(CheckGame.lowerAttack(player.getLowerAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
 
@@ -190,7 +202,7 @@ public class BattleMelano extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        melano.setlife(Game.rangedAttack(player.getRangedAttack(), melano.getLife()));
+        melano.setlife(CheckGame.rangedAttack(player.getRangedAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
 
@@ -227,7 +239,7 @@ public class BattleMelano extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        melano.setlife(Game.baseAttack(player.getBaseAttack(), melano.getLife()));
+        melano.setlife(CheckGame.baseAttack(player.getBaseAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
 
@@ -264,7 +276,7 @@ public class BattleMelano extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        melano.setlife(Game.powerAttack(player.getPowerAttack(), melano.getLife()));
+        melano.setlife(CheckGame.powerAttack(player.getPowerAttack(), melano.getLife()));
         System.out.println("vida: " + melano.getLife());
         RobotAttack.enamyAttack(melano.getName(), player);
 

@@ -37,9 +37,11 @@ public class RandomAttack {
                 return index;
             }
 
-            default -> System.out.println("fail: nome invalido");
+            default -> {
+                index = rand.nextInt(3) + 1;
+                return index;
+            }
         }
-        return 0;
     }
 
     public static int baseRandomGivenAway() {

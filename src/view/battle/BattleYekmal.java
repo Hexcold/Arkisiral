@@ -5,7 +5,7 @@ package view.battle;
 
 import characters.adversary.Yekmal;
 import characters.players.Player01;
-import logic.Game;
+import logic.CheckGame;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatYekmal;
 import view.battle.gif.SwordGif;
@@ -13,12 +13,24 @@ import view.battle.victory.VictoryYekmal;
 
 public class BattleYekmal extends javax.swing.JFrame {
 
-    public static Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
+    public static Player01 player = new Player01("Player", 125, 10, 15, 20, 30);
     public static Yekmal yekmal = new Yekmal();
     public static RobotAttack robotAttack = new RobotAttack();
 
     public BattleYekmal() {
         initComponents();
+        
+        youLife.setText(Double.toString(player.getLife()));
+        youPowerAttack.setText(Double.toString(player.getPowerAttack()));
+        youLowerAttack.setText(Double.toString(player.getLowerAttack()));
+        youRangedAttack.setText(Double.toString(player.getRangedAttack()));
+        youBaseAttack.setText(Double.toString(player.getBaseAttack()));
+
+        enemyLife.setText(Double.toString(yekmal.getLife()));
+        enemyPowerAttack.setText(Double.toString(yekmal.getPowerAttack()));
+        enemyLowerAttack.setText(Double.toString(yekmal.getLowerAttack()));
+        enemyRangedAttack.setText(Double.toString(yekmal.getRangedAttack()));
+        enemyBaseAttack.setText(Double.toString(yekmal.getBaseAttack()));
     }
 
     @SuppressWarnings("unchecked")
@@ -153,7 +165,7 @@ public class BattleYekmal extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        yekmal.setlife(Game.lowerAttack(player.getLowerAttack(), yekmal.getLife()));
+        yekmal.setlife(CheckGame.lowerAttack(player.getLowerAttack(), yekmal.getLife()));
         System.out.println("vida: " + yekmal.getLife());
         RobotAttack.enamyAttack(yekmal.getName(), player);
 
@@ -190,7 +202,7 @@ public class BattleYekmal extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        yekmal.setlife(Game.rangedAttack(player.getRangedAttack(), yekmal.getLife()));
+        yekmal.setlife(CheckGame.rangedAttack(player.getRangedAttack(), yekmal.getLife()));
         System.out.println("vida: " + yekmal.getLife());
         RobotAttack.enamyAttack(yekmal.getName(), player);
 
@@ -227,7 +239,7 @@ public class BattleYekmal extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        yekmal.setlife(Game.baseAttack(player.getBaseAttack(), yekmal.getLife()));
+        yekmal.setlife(CheckGame.baseAttack(player.getBaseAttack(), yekmal.getLife()));
         System.out.println("vida: " + yekmal.getLife());
         RobotAttack.enamyAttack(yekmal.getName(), player);
 
@@ -264,7 +276,7 @@ public class BattleYekmal extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        yekmal.setlife(Game.powerAttack(player.getPowerAttack(), yekmal.getLife()));
+        yekmal.setlife(CheckGame.powerAttack(player.getPowerAttack(), yekmal.getLife()));
         System.out.println("vida: " + yekmal.getLife());
         RobotAttack.enamyAttack(yekmal.getName(), player);
 

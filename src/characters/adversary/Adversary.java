@@ -1,3 +1,6 @@
+/**
+ * @author hexcold || (@henrq.p)
+ */
 package characters.adversary;
 
 public abstract class Adversary {

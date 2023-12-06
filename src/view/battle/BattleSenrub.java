@@ -5,7 +5,7 @@ package view.battle;
 
 import characters.adversary.Senrub;
 import characters.players.Player01;
-import logic.Game;
+import logic.CheckGame;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatSenrub;
 import view.battle.gif.SwordGif;
@@ -13,12 +13,24 @@ import view.battle.victory.VictorySenrub;
 
 public class BattleSenrub extends javax.swing.JFrame {
 
-    public Player01 player = new Player01("Player", 100, 10, 15, 20, 30);
+    public Player01 player = new Player01("Player", 500, 40, 35, 45, 50);
     public Senrub senrub = new Senrub();
     public RobotAttack robotAttack = new RobotAttack();
 
     public BattleSenrub() {
         initComponents();
+        
+        youLife.setText(Double.toString(player.getLife()));
+        youPowerAttack.setText(Double.toString(player.getPowerAttack()));
+        youLowerAttack.setText(Double.toString(player.getLowerAttack()));
+        youRangedAttack.setText(Double.toString(player.getRangedAttack()));
+        youBaseAttack.setText(Double.toString(player.getBaseAttack()));
+
+        enemyLife.setText(Double.toString(senrub.getLife()));
+        enemyPowerAttack.setText(Double.toString(senrub.getPowerAttack()));
+        enemyLowerAttack.setText(Double.toString(senrub.getLowerAttack()));
+        enemyRangedAttack.setText(Double.toString(senrub.getRangedAttack()));
+        enemyBaseAttack.setText(Double.toString(senrub.getBaseAttack()));
     }
 
     @SuppressWarnings("unchecked")
@@ -153,7 +165,7 @@ public class BattleSenrub extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        senrub.setlife(Game.lowerAttack(player.getLowerAttack(), senrub.getLife()));
+        senrub.setlife(CheckGame.lowerAttack(player.getLowerAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack(senrub.getName(), player);
 
@@ -190,7 +202,7 @@ public class BattleSenrub extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        senrub.setlife(Game.rangedAttack(player.getRangedAttack(), senrub.getLife()));
+        senrub.setlife(CheckGame.rangedAttack(player.getRangedAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack("senrub", player);
 
@@ -227,7 +239,7 @@ public class BattleSenrub extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        senrub.setlife(Game.baseAttack(player.getBaseAttack(), senrub.getLife()));
+        senrub.setlife(CheckGame.baseAttack(player.getBaseAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack("senrub", player);
 
@@ -264,7 +276,7 @@ public class BattleSenrub extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        senrub.setlife(Game.powerAttack(player.getPowerAttack(), senrub.getLife()));
+        senrub.setlife(CheckGame.powerAttack(player.getPowerAttack(), senrub.getLife()));
         System.out.println("vida: " + senrub.getLife());
         RobotAttack.enamyAttack("senrub", player);
 

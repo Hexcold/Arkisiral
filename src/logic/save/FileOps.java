@@ -14,10 +14,10 @@ public class FileOps {
     Path path = Paths.get("C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/save/save.txt");
     static String fileName = "C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/save/save.txt";
 
-    public static void write(String content) {
+    public static void write(String cont) {
         try {
             // Converta o texto em um array de bytes
-            byte[] bytes = content.getBytes();
+            byte[] bytes = cont.getBytes();
           // Sobrescreve o arquivo com o novo conteúdo
             Path path = Paths.get("C:/Users/henri/OneDrive/Documentos/GitHub/SIRILANKA-FACE/src/logic/save/save.txt");
             Files.write(path, bytes, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);

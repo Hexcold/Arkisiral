@@ -5,7 +5,7 @@ package view.battle;
 
 import characters.adversary.Naryata;
 import characters.players.Player01;
-import logic.Game;
+import logic.CheckGame;
 import logic.RobotAttack;
 import view.battle.defeat.DefeatNaryata;
 import view.battle.gif.SwordGif;
@@ -19,6 +19,18 @@ public class BattleNaryata extends javax.swing.JFrame {
 
     public BattleNaryata() {
         initComponents();
+        
+        youLife.setText(Double.toString(player.getLife()));
+        youPowerAttack.setText(Double.toString(player.getPowerAttack()));
+        youLowerAttack.setText(Double.toString(player.getLowerAttack()));
+        youRangedAttack.setText(Double.toString(player.getRangedAttack()));
+        youBaseAttack.setText(Double.toString(player.getBaseAttack()));
+
+        enemyLife.setText(Double.toString(naryata.getLife()));
+        enemyPowerAttack.setText(Double.toString(naryata.getPowerAttack()));
+        enemyLowerAttack.setText(Double.toString(naryata.getLowerAttack()));
+        enemyRangedAttack.setText(Double.toString(naryata.getRangedAttack()));
+        enemyBaseAttack.setText(Double.toString(naryata.getBaseAttack()));
     }
 
     @SuppressWarnings("unchecked")
@@ -153,7 +165,7 @@ public class BattleNaryata extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        naryata.setlife(Game.lowerAttack(player.getLowerAttack(), naryata.getLife()));
+        naryata.setlife(CheckGame.lowerAttack(player.getLowerAttack(), naryata.getLife()));
         System.out.println("vida: " + naryata.getLife());
         RobotAttack.enamyAttack(naryata.getName(), player);
 
@@ -190,7 +202,7 @@ public class BattleNaryata extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        naryata.setlife(Game.rangedAttack(player.getRangedAttack(), naryata.getLife()));
+        naryata.setlife(CheckGame.rangedAttack(player.getRangedAttack(), naryata.getLife()));
         System.out.println("vida: " + naryata.getLife());
         RobotAttack.enamyAttack("Naryata", player);
 
@@ -227,7 +239,7 @@ public class BattleNaryata extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        naryata.setlife(Game.baseAttack(player.getBaseAttack(), naryata.getLife()));
+        naryata.setlife(CheckGame.baseAttack(player.getBaseAttack(), naryata.getLife()));
         System.out.println("vida: " + naryata.getLife());
         RobotAttack.enamyAttack("Naryata", player);
 
@@ -264,7 +276,7 @@ public class BattleNaryata extends javax.swing.JFrame {
         SwordGif swordGif = new SwordGif();
         swordGif.setVisible(true);
 
-        naryata.setlife(Game.powerAttack(player.getPowerAttack(), naryata.getLife()));
+        naryata.setlife(CheckGame.powerAttack(player.getPowerAttack(), naryata.getLife()));
         System.out.println("vida: " + naryata.getLife());
         RobotAttack.enamyAttack("Naryata", player);
 
